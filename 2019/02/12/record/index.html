@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Up Sky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="demo遇见的一些问题 MUI 上拉刷新下拉加载会默认阻止a的跳转 地址栏传参 需要用encodeURIComponent()转换成url编码 否则参数出现&amp;amp;等特殊符号 会被当做参数,而且ie不兼容汉字参数,会乱码 服务端重定向针对异步请求无效,(只是对重定向的地址发送了一次请求,不会跳转页面),需要在客户端重定向 Vue中 v-html 因为能渲染标签  容易发生跨站脚本攻击 MUI 菜">
+  <meta name="description" content="1.数组解构赋值用来交换两个变量的值1234567let a = 1,    b = 2;[ a, b ] = [ b, a ];console.log(a);     // 2console.log(b);     // 1 2.克隆数组123456789101112//ES5var colors = [ &quot;red&quot;, &quot;green&quot;, &quot;blue&quot; ];var clonedColors = c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Up Sky">
 <meta property="og:url" content="http://yoursite.com/2019/02/12/record/index.html">
 <meta property="og:site_name" content="Up Sky">
-<meta property="og:description" content="demo遇见的一些问题 MUI 上拉刷新下拉加载会默认阻止a的跳转 地址栏传参 需要用encodeURIComponent()转换成url编码 否则参数出现&amp;amp;等特殊符号 会被当做参数,而且ie不兼容汉字参数,会乱码 服务端重定向针对异步请求无效,(只是对重定向的地址发送了一次请求,不会跳转页面),需要在客户端重定向 Vue中 v-html 因为能渲染标签  容易发生跨站脚本攻击 MUI 菜">
+<meta property="og:description" content="1.数组解构赋值用来交换两个变量的值1234567let a = 1,    b = 2;[ a, b ] = [ b, a ];console.log(a);     // 2console.log(b);     // 1 2.克隆数组123456789101112//ES5var colors = [ &quot;red&quot;, &quot;green&quot;, &quot;blue&quot; ];var clonedColors = c">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-12T15:39:05.971Z">
+<meta property="og:updated_time" content="2019-02-12T11:36:11.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Up Sky">
-<meta name="twitter:description" content="demo遇见的一些问题 MUI 上拉刷新下拉加载会默认阻止a的跳转 地址栏传参 需要用encodeURIComponent()转换成url编码 否则参数出现&amp;amp;等特殊符号 会被当做参数,而且ie不兼容汉字参数,会乱码 服务端重定向针对异步请求无效,(只是对重定向的地址发送了一次请求,不会跳转页面),需要在客户端重定向 Vue中 v-html 因为能渲染标签  容易发生跨站脚本攻击 MUI 菜">
+<meta name="twitter:description" content="1.数组解构赋值用来交换两个变量的值1234567let a = 1,    b = 2;[ a, b ] = [ b, a ];console.log(a);     // 2console.log(b);     // 1 2.克隆数组123456789101112//ES5var colors = [ &quot;red&quot;, &quot;green&quot;, &quot;blue&quot; ];var clonedColors = c">
   
     <link rel="alternative" href="/atom.xml" title="Up Sky" type="application/atom+xml">
   
@@ -145,16 +145,105 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="demo遇见的一些问题"><a href="#demo遇见的一些问题" class="headerlink" title="demo遇见的一些问题"></a>demo遇见的一些问题</h1><ul>
-<li>MUI 上拉刷新下拉加载会默认阻止a的跳转</li>
-<li>地址栏传参 需要用encodeURIComponent()转换成url编码 否则参数出现&amp;等特殊符号 会被当做参数,而且ie不兼容汉字参数,会乱码</li>
-<li>服务端重定向针对异步请求无效,(只是对重定向的地址发送了一次请求,不会跳转页面),需要在客户端重定向</li>
-<li>Vue中 v-html 因为能渲染标签  容易发生跨站脚本攻击</li>
-<li>MUI 菜单组件  使路由功能不能正常使用<ul>
-<li>变更  mui-tab-item  类名 （可能是因为类名冲突）</li>
+        <h6 id="1-数组解构赋值用来交换两个变量的值"><a href="#1-数组解构赋值用来交换两个变量的值" class="headerlink" title="1.数组解构赋值用来交换两个变量的值"></a>1.数组解构赋值用来交换两个变量的值</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>,</span><br><span class="line">    b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">[ a, b ] = [ b, a ];</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a);     <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(b);     <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<h6 id="2-克隆数组"><a href="#2-克隆数组" class="headerlink" title="2.克隆数组"></a>2.克隆数组</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ES5</span></span><br><span class="line"><span class="keyword">var</span> colors = [ <span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span> ];</span><br><span class="line"><span class="keyword">var</span> clonedColors = colors.concat();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(clonedColors);      <span class="comment">//"[red,green,blue]"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//ES6</span></span><br><span class="line"><span class="keyword">let</span> colors = [ <span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span> ];</span><br><span class="line"><span class="keyword">let</span> [ ...clonedColors ] = colors;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(clonedColors);      <span class="comment">//"[red,green,blue]"</span></span><br></pre></td></tr></table></figure>
+<h6 id="3-MVVM"><a href="#3-MVVM" class="headerlink" title="3.MVVM"></a>3.MVVM</h6><blockquote>
+<p>为了让我们开发更方便,因为VM提供了数据的双向绑定</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//是前端 视图层 的分层开发思想,主要是把每个页面,分成了M、V和VM ,其中VM是MVVM思想的核心,因为VM是M和V之间的调度者</span></span><br><span class="line"></span><br><span class="line">M : 保存的是每个页面中单独的数据</span><br><span class="line"></span><br><span class="line">V  : 每个页面中的HTML结构</span><br><span class="line"></span><br><span class="line">VM  :  一个调度者, 分隔了M和V , 由MV负责M和V的存取数据</span><br></pre></td></tr></table></figure>
+<h6 id="4-开发模式"><a href="#4-开发模式" class="headerlink" title="4.开发模式"></a>4.开发模式</h6><ul>
+<li>混合式开发:前后端代码混合在一起(不利于项目拓展和维护)</li>
+<li>前后端分离:后端提供数据接口,前端调用接口、渲染页面<ul>
+<li>引入MVC思想</li>
+<li>MVVM思想<ul>
+<li>MVVM与MVC最大的区别就是：它实现了View和Model的自动同步，也就是当Model的属性改变时，我们不用再自己手动操作Dom元素，来改变View的显示，而是改变属性后该属性对应View层显示会自动改变</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<h6 id="移动web"><a href="#移动web" class="headerlink" title="移动web"></a>移动web</h6><pre><code>在移动端开发网站
+</code></pre><h6 id="原生app"><a href="#原生app" class="headerlink" title="原生app"></a>原生app</h6><p>​    使用 IOS/安卓 开发原生的应用</p>
+<h6 id="webapp"><a href="#webapp" class="headerlink" title="webapp"></a>webapp</h6><p>​    使用移动web技术来开发原生app</p>
+<p>######性能优化</p>
+<p>一：减少http请求次数</p>
+<ul>
+<li>使用精灵图</li>
+<li>尽量使用字体图标替代图片</li>
+<li>合并css  js 文件</li>
+</ul>
+<p>二 : 减少资源体积</p>
+<ul>
+<li>html css js 图片 压缩</li>
+</ul>
+<p>三 : 优化网页渲染</p>
+<ul>
+<li>将css样式放在表头</li>
+<li>将 js 脚本放在底部</li>
+</ul>
+<p>三 : DOM操作优化</p>
+<ul>
+<li>使用classname代替大量的内联样式修改</li>
+<li>避免在document上直接进行频繁的DOM操作</li>
+<li>尽量使用css动画</li>
+<li>使用requestAnimationFrame代替setInterval操作</li>
+</ul>
+<p>四：使用Ajax请求的时候，可以尽量选择get请求，get请求是可以在客户端缓存的</p>
+<p>五：编辑html的时候注意语义结构化 </p>
+<p>六：懒加载</p>
+<ul>
+<li>虚拟代理加载：即为真正加载的对象事先提供一个代理或者说占位符，然后再用异步的方式加载</li>
+</ul>
+<p>七：预加载</p>
+<h6 id="首屏优化（Vue）"><a href="#首屏优化（Vue）" class="headerlink" title="首屏优化（Vue）"></a>首屏优化（Vue）</h6><ul>
+<li>方案一：路由懒加载</li>
+<li>方案二：第三方包使用CDN方式加载</li>
+</ul>
+<h6 id="登录模块"><a href="#登录模块" class="headerlink" title="登录模块"></a>登录模块</h6><p>1.找回密码</p>
+<ul>
+<li>进入忘记密码页面</li>
+<li>根据后端提供的API 验证用户名是否存在</li>
+<li>用户存在，调用发送邮件的后端API（携带用户名信息）</li>
+<li>后端接受到前端发送邮件的请求，通过用户名查找对应的邮箱，发送邮件,邮件包含<ul>
+<li>一些介绍说明</li>
+<li>前端链接<ul>
+<li>地址（后端从http请求头的Origin中获取前端ip和端口）</li>
+<li>token （携带加密信息，必须包含用户id，失效时间等关键信息 ,可以包含用户信息，用来作为重置密码的提示信息）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用户点击链接打开页面，前端调用API对token进行解密，解密后可以得到用户id，失效时间等，当前时间和失效时间做对比，未过期，则展示重置密码页面</li>
+</ul>
+<h6 id="防止表单多次提交、"><a href="#防止表单多次提交、" class="headerlink" title="防止表单多次提交、"></a>防止表单多次提交、</h6><p>1.用js禁用提交按钮</p>
+<ul>
+<li>如果客户端禁用掉js 就无效了</li>
+</ul>
+<p>2.使用Post/Redirect/Get模式 （PRG模式）</p>
+<ul>
+<li>如下情况不适用<ul>
+<li>如果用户返回表单页面，重新提交表单的情况</li>
+<li>用户在服务器端响应到达之前，多次点击提交按钮的时候。(可通过JavaScript控制提交按钮点击次数)</li>
+<li>由于服务器响应缓慢，用户刷新提交POST请求造成的多次POST请求</li>
+<li>恶意用户避开客户端预防多次提交手段，进行重复提交请求</li>
+</ul>
+</li>
+</ul>
+<p>3.在session中存放一个特殊标志</p>
+<ul>
+<li>说明：在服务端生成一个唯一标识符，存入session，将它写入表单的隐藏字段中，将表单发给浏览器。用户提交信息后，在服务端获取隐藏字段中的值，与session中的唯一标识符作比较，相等说明是首次提交，处理本次请求后，将session中标识符移除，不相等说明是重复提交，就不处理</li>
+</ul>
+<p>######vue-router 从0.7x迁移</p>
+<ul>
+<li>v-link 改为 router-link</li>
+<li>编程式导航 router.go(现在被用做 后退/前进导航) 改为 router.push </li>
+<li>定义路由</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">router.map(&#123;</span><br><span class="line">  <span class="string">'/foo'</span>: &#123;</span><br><span class="line">    component: Foo</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">'/bar'</span>: &#123;</span><br><span class="line">    component: Bar</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">替换为</span><br><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">component</span>: Foo &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/bar'</span>, <span class="attr">component</span>: Bar &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>路由定义的选项 router.redirect </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">router.redirect(&#123;</span><br><span class="line">  <span class="string">'/tos'</span>: <span class="string">'/terms-of-service'</span></span><br><span class="line">&#125;)</span><br><span class="line">替换成</span><br><span class="line">在router实例中</span><br><span class="line">&#123;</span><br><span class="line">  path: <span class="string">'/tos'</span>,</span><br><span class="line">  redirect: <span class="string">'/terms-of-service'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -249,7 +338,7 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/02/03/笔记整理/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/02/12/record1/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
@@ -293,7 +382,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 ZYupsky
+    		&copy; 2013 ZYupsky
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
