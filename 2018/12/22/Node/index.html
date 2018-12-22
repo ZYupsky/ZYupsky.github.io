@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Up Sky">
 <meta property="og:description" content="模块化 提供了exports对象  用来导出模块的成员  让模块之间通信  把需要外部访问的成员 手动挂载到exports对象上 exports.键 =值    //导出多个成员(对象) module.exports = 值        //导出成员(单个)   require(path) 返回被载入文件的exports对象  fs核心模块 提供对文件的异步操作  1.加载fs模块 1var f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-22T13:46:57.786Z">
+<meta property="og:updated_time" content="2018-12-22T14:09:30.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node">
 <meta name="twitter:description" content="模块化 提供了exports对象  用来导出模块的成员  让模块之间通信  把需要外部访问的成员 手动挂载到exports对象上 exports.键 =值    //导出多个成员(对象) module.exports = 值        //导出成员(单个)   require(path) 返回被载入文件的exports对象  fs核心模块 提供对文件的异步操作  1.加载fs模块 1var f">
@@ -173,6 +173,7 @@
 </blockquote>
 <p>1.加载fs模块</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>)	<span class="comment">//加载fs核心模块</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>2.读取文件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(path,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;	  </span><br><span class="line">  	<span class="comment">//成功data为内容,err为null</span></span><br><span class="line">    <span class="comment">//失败data为undefined , err为错误对象</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>3.写入文件</p>
