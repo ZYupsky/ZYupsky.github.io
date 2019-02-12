@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Express | Up Sky</title>
+  <title>Archives: 2019 | Up Sky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.载入express模块1var express = require(&apos;express&apos;) 2.调用express1var app = express()">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Express">
-<meta property="og:url" content="http://yoursite.com/2018/12/22/express/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Up Sky">
+<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
 <meta property="og:site_name" content="Up Sky">
-<meta property="og:description" content="1.载入express模块1var express = require(&apos;express&apos;) 2.调用express1var app = express()">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-22T14:12:27.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Express">
-<meta name="twitter:description" content="1.载入express模块1var express = require(&apos;express&apos;) 2.调用express1var app = express()">
+<meta name="twitter:title" content="Up Sky">
   
     <link rel="alternative" href="/atom.xml" title="Up Sky" type="application/atom+xml">
   
@@ -140,198 +136,151 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-express" class="article article-type-post " itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Express
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/02/12/record/" class="archive-article-date">
+  	<time datetime="2019-02-12T15:33:46.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-12</time>
+</a>
+        </div>
+    	 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/04/Node/" class="archive-article-date">
+  	<time datetime="2019-01-04T02:43:06.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/04/Node/">Node</a>
     </h1>
   
 
-        
-        <a href="/2018/12/22/express/" class="archive-article-date">
-  	<time datetime="2018-12-22T12:14:34.650Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-载入express模块"><a href="#1-载入express模块" class="headerlink" title="1.载入express模块"></a>1.载入express模块</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="2-调用express"><a href="#2-调用express" class="headerlink" title="2.调用express"></a>2.调用express</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = express()</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="3-启动服务器"><a href="#3-启动服务器" class="headerlink" title="3.启动服务器"></a>3.启动服务器</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">'/index'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//服务器接收到提交的数据 只能拿到get请求的参数,通过地址栏</span></span><br><span class="line">    req.query</span><br><span class="line">    <span class="comment">//发送数据</span></span><br><span class="line">    res.send(index.html)</span><br><span class="line">    <span class="comment">//重定向</span></span><br><span class="line">    res.redirect()	</span><br><span class="line">&#125;)</span><br><span class="line">router.post(<span class="string">'/index'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//post请求需要下载body-parser第三方包才能拿到数据</span></span><br><span class="line">    req.body</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="body-parser"><a href="#body-parser" class="headerlink" title="body-parser"></a>body-parser</h4><ul>
-<li>获取post请求数据的模块</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">'body-parser'</span>)</span><br><span class="line"></span><br><span class="line">app.use(bodyParser.urlencoded(&#123;</span><br><span class="line">    extended: <span class="literal">false</span></span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">app.use(bodyParser.json());</span><br></pre></td></tr></table></figure>
-<h3 id="4-绑定端口号"><a href="#4-绑定端口号" class="headerlink" title="4.绑定端口号"></a>4.绑定端口号</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.listen(<span class="number">80</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'服务器启动成功'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>5.app.use()</p>
-<ul>
-<li><p>开放静态资源 </p>
-<blockquote>
-<p>​利用express.static()中间件</p>
-</blockquote>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*开放public静态资源</span></span><br><span class="line"><span class="comment">  -请求public</span></span><br><span class="line"><span class="comment">  -请求必须以第一个参数开头  </span></span><br><span class="line"><span class="comment">  -如果没有第一个参数 可以直接请求</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">app.use(<span class="string">'/public/'</span>,express.static(<span class="string">'./public/'</span>));</span><br><span class="line">app.use(express.static(<span class="string">'./views/'</span>));</span><br></pre></td></tr></table></figure>
-<ul>
-<li>导入自定义组件</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="built_in">require</span>(path))	<span class="comment">//自定义组件需要写路径 不能只写文件名</span></span><br></pre></td></tr></table></figure>
-<h1 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h1><blockquote>
-<p>​    express-art-template</p>
-</blockquote>
-<p>1.配置模板引擎</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.engine(<span class="string">'html'</span>, <span class="built_in">require</span>(<span class="string">'express-art-template'</span>));</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">//加载模板引擎</span></span><br><span class="line">        -第一个参数:配置请求的文件类型 ,可以改为html</span><br><span class="line">    app.engine(<span class="string">'art'</span>,<span class="built_in">require</span>(<span class="string">'express-art-template));</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    //express会默认去项目中的views目录中找index.html</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    app.get('</span>/<span class="string">',function(req,res)&#123;</span></span><br><span class="line"><span class="string">        res.render('</span>index.html<span class="string">',&#123;</span></span><br><span class="line"><span class="string">            title:'</span>hello World<span class="string">'</span></span><br><span class="line"><span class="string">        &#125;)</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">/*  </span></span><br><span class="line"><span class="string">    修改默认寻找的路径</span></span><br><span class="line"><span class="string">        把默认的views目录替换掉</span></span><br><span class="line"><span class="string">        -app.set('</span>views<span class="string">',目录路径)</span></span><br><span class="line"><span class="string">*/</span></span><br></pre></td></tr></table></figure>
-<h3 id="Router-路由"><a href="#Router-路由" class="headerlink" title="Router 路由"></a>Router 路由</h3><p>1.获取express提供的router方法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> router = express.Router()</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果分离roter.js路由文件,最后需要</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br><span class="line"></span><br><span class="line"><span class="comment">//依赖项使用</span></span><br><span class="line">app.use(<span class="built_in">require</span>(./router.js))</span><br></pre></td></tr></table></figure>
-<p>2.路由能力</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">router.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">	 res.send(<span class="string">"你好"</span>);</span><br><span class="line">  	<span class="comment">//当状态码为404的时候 发送的数据</span></span><br><span class="line">     res.status(<span class="number">404</span>).send(<span class="string">'Sorry, we cannot find that!'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>配置了路由,通常用render()渲染内容</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">res.render(<span class="string">'index.html'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//如果配置了模板引擎</span></span><br><span class="line">res.render(<span class="string">'index.html'</span>,&#123;</span><br><span class="line">  commont:data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/22/express/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2018/12/22/Node/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Node
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/12/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/04/hello-world/" class="archive-article-date">
+  	<time datetime="2019-01-04T02:43:06.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/04/hello-world/">Hello World</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/04/mongoDb/" class="archive-article-date">
+  	<time datetime="2019-01-04T02:43:06.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/04/mongoDb/">mongoose</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/04/express/" class="archive-article-date">
+  	<time datetime="2019-01-04T02:43:06.465Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/04/express/">Express</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
+  
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -341,7 +290,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 ZYupsky
+    		&copy; 2019 ZYupsky
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -354,8 +303,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
