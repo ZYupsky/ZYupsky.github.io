@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Up Sky</title>
+  <title>Up Sky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="#####this指向 ​    this指向调用者 #####原型 1.在声明了一个函数之后，浏览器会自动按照一定的规则创建一个对象 ，这个对象就叫做原型对象  2.这个构造函数中会有一个属性 prototype，这个属性指向的就是这个构造函数对应的原型对象；原型对象中有一个属性 constructor，这个属性指向的是这个构造函数。  #####原型链  每个对象都有 __proto__ 属性">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Up Sky">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/02/03/笔记整理/index.html">
 <meta property="og:site_name" content="Up Sky">
+<meta property="og:description" content="#####this指向 ​    this指向调用者 #####原型 1.在声明了一个函数之后，浏览器会自动按照一定的规则创建一个对象 ，这个对象就叫做原型对象  2.这个构造函数中会有一个属性 prototype，这个属性指向的就是这个构造函数对应的原型对象；原型对象中有一个属性 constructor，这个属性指向的是这个构造函数。  #####原型链  每个对象都有 __proto__ 属性">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-03T19:12:38.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Up Sky">
+<meta name="twitter:description" content="#####this指向 ​    this指向调用者 #####原型 1.在声明了一个函数之后，浏览器会自动按照一定的规则创建一个对象 ，这个对象就叫做原型对象  2.这个构造函数中会有一个属性 prototype，这个属性指向的就是这个构造函数对应的原型对象；原型对象中有一个属性 constructor，这个属性指向的是这个构造函数。  #####原型链  每个对象都有 __proto__ 属性">
   
     <link rel="alternative" href="/atom.xml" title="Up Sky" type="application/atom+xml">
   
@@ -136,172 +140,191 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-笔记整理" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#####this指向</p>
+<p>​    this指向调用者</p>
+<p>#####原型</p>
+<p>1.在声明了一个函数之后，浏览器会自动按照一定的规则创建一个对象 ，这个对象就叫做原型对象 </p>
+<p>2.这个构造函数中会有一个属性 prototype，这个属性指向的就是这个构造函数对应的原型对象；原型对象中有一个属性 constructor，这个属性指向的是这个构造函数。 </p>
+<p>#####原型链</p>
+<ul>
+<li>每个对象都有 __proto__ 属性</li>
+<li>由 __proto__属性 串联起来的对象集合叫做原型链</li>
+<li>当我们访问一个对象属性时，如果这个对象不存在就会去 __proto__指向的对象里面找，一层一层找下去，这就是原型链。 </li>
+</ul>
+<p>#####继承</p>
+<p>######原型继承（原型链继承） </p>
+<p>数据相同</p>
+<p>######构造函数继承 (借用继承)</p>
+<p>1.用 call 方法 ，改变函数的this指向</p>
+<p>2.解决属性相同问题 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  Person.call(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> Student</span><br></pre></td></tr></table></figure>
+<p>######原型继承 + 构造函数继承 （组合继承）</p>
+<p>1.解决 属性 和 方法 相同的问题</p>
+<p>######拷贝继承</p>
+<p>1.利用 for in 循环来拷贝一份父类的实例</p>
+<p>2.会遍历__proto__ 所以对性能的消耗大</p>
+<p>######拷贝继承 + 借用继承</p>
+<p>#####闭包</p>
+<pre><code>① 函数嵌套
+② 外层函数中必须得有局部变量
+③ 内层函数必须要去操作外层的局部变量，并且返回给外部或让外部间接的操作
+缺点：闭包会延长局部变量的生命周期，不会释放
+</code></pre><p>#####递归</p>
+<p>​      函数在运行过程中调用函数本身</p>
+<p>#####webAPI</p>
+<ul>
+<li>字符串方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">charAt(index) 							<span class="comment">// 返回指定索引位置的字符串，超出索引返回 空字符串(字符串)</span></span><br><span class="line"></span><br><span class="line">concat(字符串<span class="number">1</span>,字符串<span class="number">2.</span>..)  				<span class="comment">//返回 拼接后的字符串（字符串）</span></span><br><span class="line"></span><br><span class="line">indexOf(要找的字符,位置开始的索引/可省略 )	  <span class="comment">//返回这个字符的索引值,没找到返回-1（索引）</span></span><br><span class="line">lastIndexOf()   			   	   		 <span class="comment">//从后向前</span></span><br><span class="line"></span><br><span class="line">replace(substr,newSubstr)  		   <span class="comment">//替换字符串</span></span><br><span class="line"></span><br><span class="line">slice(开始的索引,结束的索引); 	   <span class="comment">//返回新的字符串 (不包含结束的索引)</span></span><br><span class="line"></span><br><span class="line">split(要切割的字符(不保留),切割后留下的个数)  	<span class="comment">//切割字符串   返回重新组成的(数组)</span></span><br><span class="line"></span><br><span class="line">substr(开始的位置)	      		   			<span class="comment">//返回截取后的新字符串 (默认截取到最后)</span></span><br><span class="line">substr(开始的位置,截取的个数)  	</span><br><span class="line"></span><br><span class="line">substring(开始的索引,结束的索引)	   <span class="comment">//返回截取后的字符串   *不包含结束的索引</span></span><br><span class="line"></span><br><span class="line">fromCharCode(数字值,可多个参数)		   <span class="comment">//返回 ASCII码对应的值</span></span><br><span class="line"></span><br><span class="line">toLocaleLowerCase()		<span class="comment">//转小写</span></span><br><span class="line">toLowerCase()			<span class="comment">//转小写</span></span><br><span class="line"></span><br><span class="line">toLocaleUpperCase()		<span class="comment">//转大写</span></span><br><span class="line">toUpperCase()			<span class="comment">//转大写</span></span><br><span class="line"></span><br><span class="line">trim()					<span class="comment">//去掉字符串两端的空格</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>数组方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">forEach(函数)				<span class="comment">//遍历数组  相当于for循环</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span>(<span class="params">ele,index,[arr]</span>)</span>&#123;&#125;  元素,索引,数组</span><br><span class="line"></span><br><span class="line">indexOf(元素)				 <span class="comment">//返回索引 没有则返回-1;</span></span><br><span class="line"></span><br><span class="line">concat()				   <span class="comment">//拼接数组	返回结果</span></span><br><span class="line"></span><br><span class="line">join(<span class="string">"字符串"</span>)				<span class="comment">//返回一个字符串 (给数组的每一项添加这个"字符串")</span></span><br><span class="line"></span><br><span class="line">map(函数)					<span class="comment">//数组中每个元素都执行这个函数,把结果全部放在一个新的数组中</span></span><br><span class="line"></span><br><span class="line">reverse();				<span class="comment">//反转数组</span></span><br><span class="line"></span><br><span class="line">sort()					<span class="comment">//数组排序</span></span><br><span class="line">	</span><br><span class="line">slice(开始的索引,结束的索引)		<span class="comment">//把截取数组的值放在一个新数组中(不包含结束的索引)</span></span><br><span class="line"></span><br><span class="line">splice(开始的索引,要删除的个数,替换成的元素值)	<span class="comment">//删除数组元素 或者替换元素 或插入元素</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Array</span>.isArray()					<span class="comment">//判断这个对象是不是数组</span></span><br><span class="line"></span><br><span class="line">concat(arr1,arr2,...)			<span class="comment">//组合一个新的数组</span></span><br><span class="line"></span><br><span class="line">every(<span class="function"><span class="keyword">function</span>)			//返回布尔类型</span></span><br><span class="line"><span class="function">  <span class="title">function</span>(<span class="params">元素的值,索引值,原来的数组</span>)</span>&#123;&#125;   当所有的元素值都符合条件,才返回<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">some(<span class="function"><span class="keyword">function</span>)			//返回布尔类型</span></span><br><span class="line"><span class="function">  <span class="title">function</span>(<span class="params">元素的值,索引值,原来的数组</span>)</span>&#123;&#125;   当有元素值符合条件,就会返回<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">filter(函数)				<span class="comment">//返回数组中符合函数条件的元素,组成新数组</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span>(<span class="params">ele,index ,arr*遍历的数组</span>)</span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">push(值)			<span class="comment">//把值追加到数组的最后一个元素 *(返回追加后数组的长度)</span></span><br><span class="line"></span><br><span class="line">unshift(值)		<span class="comment">//向数组第一个元素前面 插入新元素 *(返回值是插入后的数组长度)</span></span><br><span class="line"></span><br><span class="line">pop()			<span class="comment">//删除数组的最后一个元素	 *(返回删除的值)</span></span><br><span class="line"></span><br><span class="line">shift()			<span class="comment">//删除数组的第一个  *(返回删除的值)</span></span><br></pre></td></tr></table></figure>
+<p>#####vue生命周期</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- 创建一个vue实例</span><br><span class="line">- 初始化vue事件和生命周期</span><br><span class="line">- 初始化data和methods</span><br><span class="line">- 生成虚拟DOM</span><br><span class="line">- 用虚拟DOM替换vue中,el控制的区域，并解析虚拟DOM</span><br><span class="line">- 当data数据发生改变时，会更新虚拟DOM ，重复执行上一步操作</span><br><span class="line">  - 有一些生命周期钩子函数</span><br><span class="line">    - beforeCreate   <span class="comment">//实例刚被创建	el 和 data 还未初始化</span></span><br><span class="line">    - created   	<span class="comment">//实例创建完成 	完成了data的初始化 el还未初始化</span></span><br><span class="line">    - beforeMount	<span class="comment">//完成了 el 和 data 的初始化 (数据还只是插值表达式)</span></span><br><span class="line">    - mounted		<span class="comment">//完成了挂载</span></span><br><span class="line">    - beforeUpdate	<span class="comment">//组件更新前	</span></span><br><span class="line">    - updated		<span class="comment">//组件更新之后</span></span><br><span class="line">    - beforeDestroy   </span><br><span class="line">    - destroyed     <span class="comment">//组件销毁</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/12/record/" class="archive-article-date">
-  	<time datetime="2019-02-12T15:33:46.624Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-12</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/03/笔记整理/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/03/笔记整理/" class="archive-article-date">
-  	<time datetime="2019-02-03T05:17:11.801Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-03</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/04/Node/" class="archive-article-date">
-  	<time datetime="2019-01-04T02:43:06.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/04/Node/">Node</a>
-    </h1>
+    <a href="/2019/02/12/record/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
+  
+    <a href="/2019/01/04/Node/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Node</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/04/hello-world/" class="archive-article-date">
-  	<time datetime="2019-01-04T02:43:06.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/04/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/04/mongoDb/" class="archive-article-date">
-  	<time datetime="2019-01-04T02:43:06.481Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/04/mongoDb/">mongoose</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/04/express/" class="archive-article-date">
-  	<time datetime="2019-01-04T02:43:06.465Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/04/express/">Express</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -324,8 +347,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
